@@ -15,7 +15,7 @@ app.post('/search', async (req, res) => {
     const browser =await puppeteer.launch({
         executablePath: revisionInfo.executablePath,
         ignoreDefaultArgs: ['--disable-extensions'],
-        headless: true,
+        headless: false,
         args: ['--no-sandbox', "--disabled-setupid-sandbox"]
       });
     const page = await browser.newPage();
